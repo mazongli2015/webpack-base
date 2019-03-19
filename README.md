@@ -2,11 +2,13 @@
 webpack 的一些常用配置。
 
 #安装命令
+```command
 yarn install
+```
 
 #eslint 配置
 0表示关闭规则，1表示违反规则会报警告，2表示违反规则会报错
-
+```json
 {
     "extends": "eslint:recommended",  // 继承默认配置
     "parserOptions": {
@@ -32,9 +34,10 @@ yarn install
         "no-duplicate-imports": 2 // 不能重复import同样的东西
     }
 }
-
+```
 
 #babel配置
+```javascript
 const presets = [
     [
       "@babel/env", // babel环境，stage-0~stage2等在V7.3的版本已经被删除，统一使用@babel/env
@@ -44,16 +47,19 @@ const presets = [
       },
     ],
   ];
-
+```
 
 #webpack-dev-server配置
+```javascript
 const options = {
   contentBase: ['./dist'],  // 根目录
   hot: true, // 启用热替换
   host: 'localhost', // 服务器名称
 };
+```
 
 #webpack配置
+```javascript
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -186,3 +192,4 @@ module.exports = {
     new CleanWebpackPlugin(), // 每次重新编译，自动清除根目录的缓存文件
   ]
 };
+···
