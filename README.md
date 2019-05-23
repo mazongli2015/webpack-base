@@ -8,7 +8,7 @@ yarn install
 
 #eslint 配置
 0表示关闭规则，1表示违反规则会报警告，2表示违反规则会报错
-```json
+```javascript
 {
     "extends": "eslint:recommended",  // 继承默认配置
     "parserOptions": {
